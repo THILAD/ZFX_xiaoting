@@ -3,7 +3,7 @@
     <v-dialog v-model="alertVerDialog" max-width="500">
       <v-card>
         <v-card-title class="text-h5 lighten-2">
-          {{ $t("pleaseVerify") }}
+          {{ $t("pleaseVerify")}}
         </v-card-title>
 
         <v-card-text v-html="$t('alertLoginVerify')"> </v-card-text>
@@ -15,6 +15,7 @@
           <v-btn color="primary" text @click="onGoRegisterAgain()">
             {{ $t("signup") }}
           </v-btn>
+          
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -45,14 +46,19 @@
           <v-spacer></v-spacer>
           <!-- <v-btn plain color="#1976D2"><b>Sign up</b></v-btn> -->
         </v-toolbar>
+       <div>
+       </div>
         <v-container class="my-10" style="max-width: 90%">
-          <h2>{{ $t("welcome") }}</h2>
+        
+          <!-- <h2>{{ $t("welcome") }}</h2> -->
+       
           <v-img
             class="mx-auto my-2"
             src="/logo.jpeg"
             width="80"
             height="80"
           ></v-img>
+       
           <v-text-field
             v-model="email"
             variant="underlined"
@@ -78,6 +84,7 @@
               $t("signup")
             }}</span>
           </center>
+         
           <br />
 
           <v-btn
@@ -87,10 +94,16 @@
             color="#19309f"
             @click="onLogin"
             >{{ $t("login") }}</v-btn
-          >
+          > 
 
           <!-- <v-btn class="mt-5" dark text color="primary">Forgot password?</v-btn> -->
         </v-container>
+        <center>
+            {{ $t("hellper") }}
+            <span style="color: #19309f"  @click="openInNewTab('https://direct.lc.chat/15630159/')">{{
+              $t("contact")
+            }}</span>
+          </center>
       </v-card>
     </v-dialog>
   </div>
@@ -128,6 +141,9 @@ export default {
     noAcc() {
       this.$emit("openRegister");
       this.dialog = false;
+    },
+    openInNewTab(url) {
+      window.open(url, "_blank", "noreferrer");
     },
     onLogin: async function () {
       this.isLoading = true;

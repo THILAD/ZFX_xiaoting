@@ -99,5 +99,7 @@
   "ifForgetPass": "Trong trường hợp bạn quên mã, vui lòng liên hệ với quản trị viên để được hỗ trợ.",
   "alreadySetPasscode": "Bạn đã thiết lập mã đã được!",
   "pleaseSetPasscode": "Vui lòng thiết lập Mã",
+  "hellper": "Trung tâm hỗ trợ?",
+  "contact": "Ủng hộ", 
   "alertLoginVerify": "<p>Kính gửi khách hàng, chúng tôi xin kính đề nghị bạn xác minh email bằng cách <strong>đăng ký lại bằng cùng một email</strong>. Hãy yên tâm rằng dữ liệu cũ và tiền trong ví của bạn sẽ được bảo toàn và không thay đổi.</p>"
 }
